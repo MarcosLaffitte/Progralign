@@ -1,0 +1,169 @@
+################################################################################
+#                                                                              #
+#  README - Program: CreatorTool_Cycles.py                                     #
+#                                                                              #
+#  - Paper: [-]                                                                #
+#                                                                              #
+#  - Github repository: https://github.com/MarcosLaffitte/Progralign           #
+#                                                                              #
+#  - Date: 01 August 2023                                                      #
+#                                                                              #
+#  - Contributor(s) to this script:                                            #
+#    * @MarcosLaffitte - Marcos E. Gonzalez Laffitte                           #
+#                                                                              #
+#  - Description: vertion of CreatorTool that produces 3 graphs with cycles.   #                
+#                                                                              #
+#  --------------------------------------------------------------------------  #
+#                                                                              #
+# - LICENSE:                                                                   #
+#                                                                              #
+#   This file is part of the work published in                                 #
+#            [article url]                                                     #
+#   and it is released under                                                   #
+#            MIT License Copyright (c) 2023 Marcos E. González Laffitte        #
+#   See LICENSE file in                                                        #
+#            https://github.com/MarcosLaffitte/Progralign                      #
+#   for full license details.                                                  #
+#                                                                              #
+################################################################################
+
+
+# requires / used versions #####################################################
+"""
+> Lenguaje: python 3.10.9
+> Anaconda: conda 23.3.1
+> Packages installed with anaconda:
+***** networkx 2.8.4
+"""
+
+
+# dependencies #################################################################
+
+
+# installed with conda ---------------------------------------------------------
+import networkx as nx
+import matplotlib.pyplot as plt
+
+
+# already in python ------------------------------------------------------------
+import random
+import pickle as pkl
+from copy import deepcopy
+from itertools import product, combinations
+
+
+# turn off warnings and matplotlib to run in the server ------------------------
+import warnings
+warnings.filterwarnings("ignore")
+
+
+# main #########################################################################
+
+
+# initial message
+print("\n")
+print(">>> Creator Tool: Cycles - Progralign Github Repository")
+
+
+# task message
+print("\n")
+print("*** creating sample graphs ...")
+
+
+# C3-C4
+GA = nx.Graph()
+GA.add_node("1", labelV = "A")
+GA.add_node("2", labelV = "A")
+GA.add_node("3", labelV = "A")
+GA.add_edge("1", "2")
+GA.add_edge("2", "3")
+GA.add_edge("3", "1")
+GA.add_node("4", labelV = "I1")
+GA.add_edge("1", "4")
+GA.add_edge("4", "5")
+GA.add_node("5", labelV = "B")
+GA.add_node("6", labelV = "B")
+GA.add_node("7", labelV = "B")
+GA.add_node("8", labelV = "B")
+GA.add_edge("5", "6")
+GA.add_edge("6", "7")
+GA.add_edge("7", "8")
+GA.add_edge("8", "5")
+nx.draw(GA, with_labels = True)
+plt.show()
+
+
+# C4-C5
+GB = nx.Graph()
+GA.add_node("1", labelV = "B")
+GA.add_node("2", labelV = "B")
+GA.add_node("3", labelV = "B")
+GA.add_node("4", labelV = "B")
+GB.add_edge("1", "2")
+GB.add_edge("2", "3")
+GB.add_edge("3", "4")
+GB.add_edge("4", "1")
+GA.add_node("5", labelV = "I2")
+GB.add_edge("2", "5")
+GB.add_edge("5", "6")
+GA.add_node("6", labelV = "C")
+GA.add_node("7", labelV = "C")
+GA.add_node("8", labelV = "C")
+GA.add_node("9", labelV = "C")
+GA.add_node("10", labelV = "C")
+GB.add_edge("6", "7")
+GB.add_edge("7", "8")
+GB.add_edge("8", "9")
+GB.add_edge("9", "10")
+GB.add_edge("10", "6")
+nx.draw(GB, with_labels = True)
+plt.show()
+
+
+# C5-C6
+GC = nx.Graph()
+GA.add_node("1", labelV = "C")
+GA.add_node("2", labelV = "C")
+GA.add_node("3", labelV = "C")
+GA.add_node("4", labelV = "C")
+GA.add_node("5", labelV = "C")
+GC.add_edge("1", "2")
+GC.add_edge("2", "3")
+GC.add_edge("3", "4")
+GC.add_edge("4", "5")
+GC.add_edge("5", "1")
+GA.add_node("6", labelV = "I3")
+GC.add_edge("1", "6")
+GC.add_edge("6", "7")
+GA.add_node("7", labelV = "D")
+GA.add_node("8", labelV = "D")
+GA.add_node("9", labelV = "D")
+GA.add_node("10", labelV = "D")
+GA.add_node("11", labelV = "D")
+GA.add_node("12", labelV = "D")
+GC.add_edge("7", "8")
+GC.add_edge("8", "9")
+GC.add_edge("9", "10")
+GC.add_edge("10", "11")
+GC.add_edge("11", "12")
+GC.add_edge("12", "7")
+nx.draw(GC, with_labels = True)
+plt.show()
+
+
+
+# save graphs
+graphsList = [GA, GB, GC]
+outFile = open("test_cycles.pkl", "wb")
+pkl.dump(graphsList, outFile)
+outFile.close()
+
+
+# final message
+print("\n")
+print(">>> Finished")
+print("\n")
+
+
+# end ##########################################################################
+################################################################################
