@@ -1,4 +1,4 @@
-# Progralign - Welcome to the Repo
+# Progralign - Welcome to the Repository
 
 <p align="center">
 <img src="./ReadmeLogo/example_Results_3D_plots.png" width="195"/> <img src="./ReadmeLogo/Progralign_logo.png" width="350"/> <img src="./ReadmeLogo/alignment2D.png" width="170"/>
