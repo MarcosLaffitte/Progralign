@@ -59,7 +59,7 @@ There you can find detailed information on the algorithms implemented here. This
 <br/>
 
 <p align="center">
-<img src="./ReadmeLogo/alignments.png" width="500"/>
+<img src="./ReadmeLogo/Alignments.png" width="500"/>
 </p>
 <div align="center">
 <strong>Overview of the progressive alignment carried by ProGrAlign <a href="https://www.mdpi.com/1999-4893/17/3/116">[1]</a></strong><br/>
