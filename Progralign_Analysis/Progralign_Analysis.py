@@ -26,9 +26,9 @@
 #    * default:  python  Progralign_Analysis.py  ToyExample.pkl                #
 #    * or:       python  Progralign_Analysis.py  --expand  ToyExample.pkl      #
 #                                                                              #
-#    By default the program runs with the iterative trimming algorithm for     #
-#    MCS search, but the --expand option runs instead the recursive expansion  #
-#    based on the VF2 algorithm modified for MCS search, see Paper for details #
+#    By default the program runs the iterative trimming algorithm for MCS      #
+#    search, but the --expand option runs instead the recursive expansion      #
+#    based on the VF2 algorithm modified for MCS search, details in Paper.     #
 #                                                                              #
 #  - Expected output: example_Results.pkl                                      #
 #                                                                              #
