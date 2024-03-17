@@ -18,7 +18,7 @@
 #                                                                              #
 #  - Input: a python list of graphs inside a pickle file like the one created  #
 #    by the CreatorTool in the Progralign repository. These should be either   #
-#    of NetworkX's type Graph or type DiGraph.                                 #
+#    of NetworkX's types Graph or DiGraph.                                     #
 #                                                                              #
 #  - Output: a pickled python dictionary with the results of the alignment.    #
 #                                                                              #
