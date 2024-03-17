@@ -17,7 +17,8 @@
 #    by following a guide tree built with WPGMA on graph kernel similarities.  #
 #                                                                              #
 #  - Input: a python list of graphs inside a pickle file like the one created  #
-#    by the CreatorTool in the Progralign repository.                          #
+#    by the CreatorTool in the Progralign repository. These should be either   #
+#    of NetworkX's type Graph or type DiGraph.                                 #
 #                                                                              #
 #  - Output: a pickled python dictionary with the results of the alignment.    #
 #                                                                              #
@@ -2113,11 +2114,11 @@ print("* Evaluating consistency of the input file ...")
 
 
 # evaluate consistency of the input file
+testG = nx.Graph()
+testD = nx.DiGraph()
 for eachGraph in inputList:
-    try:
-        nx.is_directed(eachGraph)
-    except:
-        exit("\n >> Progralign: the file " + inputFileName + " contains an object which is not a networkx (di-)graph.\n")
+    if(not type(eachGraph) in [type(testG), type(testD)]):
+        exit("\n >> Progralign: the file " + inputFileName + " contains an object which is not of NetworkX's type Graph or DiGraph.\n")
 if(not len(list(set([type(eachGraph) for eachGraph in inputList]))) == 1):
     exit("\n >> Progralign: the file " + inputFileName + " contains both directed and undirected graphs. These must be of the same type.\n")
 if(len(inputList) == 1):
