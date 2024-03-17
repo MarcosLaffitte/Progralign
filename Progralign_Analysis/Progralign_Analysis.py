@@ -29,7 +29,8 @@
 #                                                                              #
 #    By default the program runs the iterative trimming algorithm for MCS      #
 #    search, but the --expand option runs instead the recursive expansion      #
-#    based on the VF2 algorithm modified for MCS search, details in Paper.     #
+#    based on the VF2 algorithm modified for MCS search, please find more      #
+#    details in the Paper cited above.                                         #
 #                                                                              #
 #  - Expected output: example_Results.pkl                                      #
 #                                                                              #
