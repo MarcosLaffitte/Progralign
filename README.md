@@ -42,7 +42,7 @@ The formal alignment of graphs and other mathematical objects was initially prop
 </p>
 <br/>
 
-**Note:** the graphs shown in the examples are planar, but in general these don't need to be so. These can be all type of graphs, be it directed, undirected, labeled or unlabeled and with or without loops. They only need to be NetworkX objects of type either Graph or Digraph, all of the same type. Find more information on the following reference.
+**Note:** the graphs shown in the examples are planar, but in general these don't need to be so. These can be all type of graphs, be it directed, undirected, labeled or unlabeled and with or without loops. They only need to be NetworkX objects of type either Graph or DiGraph, all of the same type. Find more information on the following reference.
 
 ## Cite as
 
@@ -99,7 +99,7 @@ python  CreatorTool.py
 
 
 ### Run Progralign_Analysis
-###### If you already have a pickle file [myFile.pkl] containing a list of NetworkX graphs, then you can align them with:
+###### If you already have a pickle file [myFile.pkl] containing a list of NetworkX Graphs or DiGraphs, then you can align them with:
 ```
 python  Progralign_Analysis.py  [myFile.pkl]
 ```
