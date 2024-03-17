@@ -42,8 +42,7 @@ The formal alignment of graphs and other mathematical objects was initially prop
 </p>
 <br/>
 
-**Note:** the graphs shown in the examples are planar, but in general these don't need to be so. These can be all type of graphs, be it directed, undirected, labeled or unlabeled and with or without loops. Find more information on the following reference.
-
+**Note:** the graphs shown in the examples are planar, but in general these don't need to be so. These can be all type of graphs, be it directed, undirected, labeled or unlabeled and with or without loops. Find more information on the following reference. They only need to be NetworkX objects of type either Graph or Digraph, all of the same type.
 
 ## Cite as
 
